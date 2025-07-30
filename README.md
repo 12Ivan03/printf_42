@@ -34,8 +34,6 @@ Key aspects of the implementation include:
 | `%%`        | Literal percent sign    |
  --------------------------------------- 
 
----
-
  ## Installation
 
  ```bash
@@ -57,7 +55,7 @@ int main(void) {
     return 0;
 }
 ```
----
+
  ``` bash
  gss -Wall -Wextra -Werror main.c libftprintf.a
  ./a.out
