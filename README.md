@@ -21,7 +21,6 @@ Key aspects of the implementation include:
 
 ## Supported Format Specifiers
 
- ---------------------------------------
 |  Specifier  | Description             |
 |-------------|-------------------------|
 | `%c`        | Character               |
@@ -32,7 +31,8 @@ Key aspects of the implementation include:
 | `%x`        | Hexadecimal (lowercase) |
 | `%X`        | Hexadecimal (uppercase) |
 | `%%`        | Literal percent sign    |
- --------------------------------------- 
+ 
+---
 
  ## Installation
 
