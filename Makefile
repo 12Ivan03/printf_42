@@ -10,27 +10,28 @@ OBJ_FILES = $(SRC_FILES:.c=.o)
 
 NAME = libftprintf.a
 
-LIBFT = ./libft/libft.a
+LIBFT_DIR = ./libft
+LIBFT_A = $(LIBFT_DIR)/libft.a
 
 all: $(NAME)
 
 %.o: %.c
 	$(CC) $(CFLAGS) $(CLIB) $^ -o $@
 
-$(LIBFT):
-	$(MAKE) -C libft
+$(LIBFT_A):
+	$(MAKE) -C $(LIBFT_DIR)
 
-$(NAME): $(OBJ_FILES) $(LIBFT)
-	cp $(LIBFT) $(NAME)
+$(NAME): $(OBJ_FILES) $(LIBFT_A)
+	cp $(LIBFT_A) $(NAME)
 	ar -rcs $@ $^
 
 clean:
 	rm -f $(OBJ_FILES)
-	$(MAKE) -C libft clean
+	$(MAKE) -C $(LIBDR_DIR) clean
 
 fclean: clean
 	rm -f $(NAME)
-	$(MAKE) -C libft fclean
+	$(MAKE) -C $(LIBFT_DIR) fclean
 
 re: clean fclean all
 

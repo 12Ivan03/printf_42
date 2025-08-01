@@ -1,0 +1,32 @@
+# Compiled object files
+*.o
+
+# Static libraries
+*.a
+
+# Executable files
+libftprintf.a
+a.out
+
+# Backup files created by editors
+*~
+*.swp
+*.swo
+
+# MacOS system files
+.DS_Store
+
+# Logs and temporary files
+*.log
+*.tmp
+
+# Ignore build directories (if any)
+build/
+bin/
+
+# Ignore libft build artifacts (submodule)
+libft/*.o
+libft/*.a
+libft/*~ 
+libft/*.log
+
