@@ -6,9 +6,9 @@ printf_42 - A custom implementation of the standard `printf` function in C. Deve
 
 ## Overview
 
-`ft_printf` replicates the behavior of the standard `printf` function from the C library, handling formatted output using variadic arguments. This project was developed **without using any standard library formatting functions, focusing instead on low_level string manipulation, format parsing, and output via system calls.
+`ft_printf` replicates the behaviour of the standard `printf` function from the C library, handling formatted output using variadic arguments. This project was developed **without using any standard library formatting functions, focusing instead on low-level string manipulation, format parsing, and output via system calls.
 
-The goal was to create a minial and functional version of the `printf` that replicates the core behaviour of the original function.
+The goal was to create a minimal and functional version of the `printf` that replicates the core behaviour of the original function.
 
 Key aspects of the implementation include:
 
@@ -35,9 +35,11 @@ Key aspects of the implementation include:
 ---
 
  ## Installation
+ **Note:** *This project uses linft as a Git submodule (in libft_42/)*
+ 
 
  ```bash
- git clone https://gituhb.com/yourusername/printf_42.git
+ git clone `rgb(255, 165, 0)` --recurse-submodules https://gituhb.com/yourusername/printf_42.git
  cd printf_42
  make
  ```
