@@ -35,11 +35,11 @@ Key aspects of the implementation include:
 ---
 
  ## Installation
- **Note:** *This project uses linft as a Git submodule (in libft_42/)*
+ **Note:** *This project uses libft as a Git submodule (in libft_42/)*
  
 
  ```bash
- git clone `rgb(255, 165, 0)` --recurse-submodules https://gituhb.com/yourusername/printf_42.git
+ git clone --recurse-submodules https://gituhb.com/yourusername/printf_42.git
  cd printf_42
  make
  ```
@@ -59,7 +59,7 @@ int main(void) {
 ```
 
  ``` bash
- gss -Wall -Wextra -Werror main.c libftprintf.a
+ cc -Wall -Wextra -Werror main.c libftprintf.a
  ./a.out
  ```
 
