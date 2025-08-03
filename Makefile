@@ -1,5 +1,5 @@
 CC = cc
-CFLAGS = -Wall -Wextra -Werror -I./libft -I.
+CFLAGS = -Wall -Wextra -Werror -I./libft_42 -I.
 CLIB = -c
 
 SRC_FILES = ft_printf.c ft_putchar_print.c ft_putstr_print.c ft_print_address.c \
@@ -10,24 +10,26 @@ OBJ_FILES = $(SRC_FILES:.c=.o)
 
 NAME = libftprintf.a
 
-LIBFT_DIR = ./libft
+LIBFT_DIR = ./libft_42
 LIBFT_A = $(LIBFT_DIR)/libft.a
 
-all: $(NAME)
+all: $(LIBFT_A) $(NAME)
 
 %.o: %.c
-	$(CC) $(CFLAGS) $(CLIB) $^ -o $@
+	$(CC) $(CFLAGS) $(CLIB) -c $^ -o $@
 
 $(LIBFT_A):
 	$(MAKE) -C $(LIBFT_DIR)
 
-$(NAME): $(OBJ_FILES) $(LIBFT_A)
-	cp $(LIBFT_A) $(NAME)
-	ar -rcs $@ $^
+$(NAME): $(OBJ_FILES)
+	@mkdir -p tmp_obj
+	@cd tmp_obj && ar -x ../$(LIBFT_A)
+	ar -rcs $@ $(OBJ_FILES) tmp_obj/*.o
+	@rm -rf tmp_obj
 
 clean:
 	rm -f $(OBJ_FILES)
-	$(MAKE) -C $(LIBDR_DIR) clean
+	$(MAKE) -C $(LIBFT_DIR) clean
 
 fclean: clean
 	rm -f $(NAME)
